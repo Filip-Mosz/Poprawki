@@ -1,4 +1,5 @@
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Deque;
 import java.util.Queue;
 
@@ -76,14 +77,22 @@ public class Main {
         System.out.println(flip.pop());
 
         System.out.println("\nBinary search");
-        int[] tab = new int[50];
-        for (int i = 0; i < tab.length; i++) {
-            tab[i] = i * 2;
+        int[] tab = new int[25];
+        for (int i = tab.length - 1; i > 0; i--) {
+            tab[i] = 50 - (i*2);
         }
 
         System.out.println(MyBinarySearch.search(tab,15));
         System.out.println(MyBinarySearch.search(tab,16));
         System.out.println(MyBinarySearch.search(tab,51));
+
+        System.out.println("\nbuildIn " + Arrays.binarySearch(tab, 16));
+
+        System.out.println("\nSort");
+
+
+        System.out.println("Nie posortowane " + Arrays.toString(tab));
+        System.out.println("Posortowane "+Arrays.toString(MySelectionSort.sort(tab)));
     }
 
 }

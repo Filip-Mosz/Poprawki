@@ -31,7 +31,7 @@ public class MyBinarySearch {
             }
         }
 
-        // TODO: 2020-07-04 przerobić na generyka(tylko po co?) 
+        // TODO: 2020-07-04 przerobić na generyka(tylko po co?)
 
     }
 }
