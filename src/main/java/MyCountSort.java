@@ -13,14 +13,18 @@ public class MyCountSort {
         for (int i = 0; i < givenArray.length; i++) {
             givenArray[i] = supportArray[givenArray[i]]++;
         }
-        System.out.println("\n  SupportArray" + Arrays.toString(supportArray));
+        //System.out.println("\n  SupportArray" + Arrays.toString(supportArray));
 
         int[] result = new int[givenArray.length];
         int idx = 0;
-        for (int j = 0; j < givenArray.length; j++) {
-            for (int k = 0; k < supportArray[k]; k++) {
-                System.out.println("Wartość do tablicy" + j + " i idx" + idx);
-                result[idx++] = j;
+        for (int j = 0; j < supportArray.length; j++) {
+            if (supportArray[j] != 0) {
+                for (int k = 0; k < supportArray[j]; k++) {
+
+                    //System.out.println("Wartość do tablicy" + j + " i idx" + idx + "i K " + k);
+                    result[idx++] = j;
+                    //System.out.println("SupportArray value " + supportArray[k]);
+                }
             }
         }
 

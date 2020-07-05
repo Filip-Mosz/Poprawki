@@ -92,7 +92,12 @@ public class Main {
         tab[12] = 20;
         tab[11] = 20;
         tab[3] = 20;
-        System.out.println("\nCountSort\n" + Arrays.toString(MyCountSort.sort(tab)));
+        int[] array = new int[]{6, -7, 9, 3, 5, 4, 2, 3, 1, 8, 6, 5, 7, 4, 2, 4, 3, 1};
+        System.out.println("\nCountSort\n"
+                + "Nieposortowana\n" + Arrays.toString(array));
+        System.out.println("Posortowana:\n" + Arrays.toString(MyCountSort.sort(array)));
+
+        System.out.println("\n");
 
 
         Person one = new Person(52, "Jacek", "Kaczmarski");
