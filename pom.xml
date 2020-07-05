@@ -7,6 +7,16 @@
     <groupId>org.example</groupId>
     <artifactId>Poprawki</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -16,6 +26,7 @@
                     <source>11</source>
                     <target>11</target>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>

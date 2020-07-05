@@ -107,8 +107,29 @@ public class Main {
         System.out.println(listOfPersons);
 
         four.setSurname("Brzeczyszczykiewicz");
-        four.setSurname("u"); //tak ma być
+        //four.setSurname("u"); //tak ma być czyli rzuca wyjątkiem
 
+        List<String> strings = Arrays.asList("zupa", "widelec", "lyzka", "talerz", "obrus");
+
+        strings.sort(
+                (String s1, String s2) -> Integer.compare(s2.length(), s1.length())); //to jest właśnie lambda
+        strings.forEach(s -> System.out.println(s));
+
+        System.out.println();
+        List<String> stringz = Arrays.asList("zupa", "widelec", "lyzka", "talerz", "obrus");
+
+        stringz.sort(
+                (String s1, String s2) -> {
+                    return Integer.compare(s2.length(), s1.length());
+                }); //to jest właśnie lambda blokowa
+        stringz.forEach(z -> System.out.println(z)); //skrót do for each
+
+        //referencja do metody
+        System.out.println("referencja do metody");
+
+        strings.forEach(element -> System.out.println(element));
+        System.out.println("inne podejście");
+        strings.forEach(System.out::println); // o tu
     }
 
 }//10 mln 10b liczb O(N)
